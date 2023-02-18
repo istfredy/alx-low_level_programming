@@ -7,11 +7,13 @@
 int main(void)
 {
 /* My code */
-int n = 0;
-while (n <= 9)
+int n;
+n = 0;
+while (n < 10)
 {
-printf("%d\n", n);
+putchar(n + '0');
 n++;
 }
+putchar('\n');
 return (0);
 }
