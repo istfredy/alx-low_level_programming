@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Entry point
  *
@@ -7,6 +7,14 @@
 int main(void)
 {
 /* My Code C..... */
-printf("_putchar\n");
+_putchar(95);/*because 95 is a value of "_" in ASCII */
+_putchar("p");
+_putchar("u");
+_putchar("t");
+_putchar("c");
+_putchar("h");
+_putchar("a");
+_putchar("r");
+_putchar("\n");
 return (0);
 }
