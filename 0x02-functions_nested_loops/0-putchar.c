@@ -4,7 +4,7 @@
  *
  * Return: 0 on success and none on faillure
  */
-main(void)
+int main(void)
 {
 /* My Code C..... */
 _putchar("_");/*because 95 is a value of "_" in ASCII */
