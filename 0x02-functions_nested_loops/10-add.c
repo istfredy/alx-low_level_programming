@@ -9,6 +9,6 @@
  */
 int add(int n1, int n2)
 {
-/*My Code Here*/
-return(n1 + n2);
+/*My code Here*/
+return (n1 + n2);
 }

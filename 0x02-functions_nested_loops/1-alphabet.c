@@ -5,10 +5,11 @@
 void print_alphabet(void)
 {
 /*Code Here*/
-char lc;
-for (lc = 'a'; lc <= 'z'; lc++)
+char lc = 'a';
+while ( lc <= 'z')
 {
 _putchar(lc);
+lc++;
 }
 _putchar('\n');
 }

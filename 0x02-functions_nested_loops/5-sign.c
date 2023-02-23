@@ -24,5 +24,3 @@ else
 _putchar('-');
 return (-1);
 }
-/* My Code Here */
-}
