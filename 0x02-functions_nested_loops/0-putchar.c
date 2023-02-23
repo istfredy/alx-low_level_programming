@@ -7,14 +7,14 @@
 int main(void)
 {
 /* My Code C..... */
-_putchar("_");/*because 95 is a value of "_" in ASCII */
-_putchar("p");
-_putchar("u");
-_putchar("t");
-_putchar("c");
-_putchar("h");
-_putchar("a");
-_putchar("r");
-_putchar("\n");
+_putchar('_');/*because 95 is a value of "_" in ASCII */
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
 return (0);
 }
