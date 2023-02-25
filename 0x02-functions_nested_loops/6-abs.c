@@ -12,11 +12,7 @@
 int _abs(int n)
 {
 /*My Code Here */
-if (n == 0)
-{
-return (0);
-}
-else if (n > 0)
+if (n >= 0)
 {
 return (n);
 }
