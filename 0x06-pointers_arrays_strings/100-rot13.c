@@ -17,11 +17,11 @@ for (i = 0; s[i] != '\0'; i++)
 {
 boolean = 0;
 for (j = 0; alpha[j] != '\0' && boolean == 0; j++)
-{	
-if (s[i] == alpha[j])	
-{		
-s[i] = r[j];		
-boolean = 1;	
+{
+if (s[i] == alpha[j])
+{
+s[i] = r[j];
+boolean = 1;
 }
 }
 }
