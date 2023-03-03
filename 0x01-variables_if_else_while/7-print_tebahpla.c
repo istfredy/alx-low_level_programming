@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
- * main - Entry of point
+ * main - prints lower case alphabets in reverse
  *
- * Return: 0 on success, none on faillure
+ * Return: 0, if succesful
  */
 int main(void)
 {
-/* Start of my code */
-char c = 'z';
-while (c >= 'a')
-{
-putchar(c);
-c--;
-}
-putchar('\n');
-return (0);
+	char rv;
+
+	/*
+	 * loops through the alphabets from behind
+	 * to print alphabets in reverse
+	 */
+	for (rv = 'z' ; rv >= 'a' ; rv--)
+	{
+		putchar(rv);
+	}
+	putchar('\n');
+	return (0);
 }

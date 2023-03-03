@@ -1,33 +1,31 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
+/* more headers goes there */
 /**
- * main - Entry point for the program
+ * main -prints last digit of random number,showing >5,<6,=0
  *
- * This function serves as the entry point for the program.
- *
- * Return: "Last digit of n is" on success, non-zero on failure
+ * Return: 0, if succesful
  */
 int main(void)
 {
-int n, last_digit;
-/* Your code goes here */
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-printf("Last digit of %d is ", n);
+	int n;
 
-last_digit = abs(n) % 10;
-if (last_digit < 5)
-{
-printf("%d and is greater than 5\n", last_digit);
-}
-else if (last_digit == 0)
-{
-printf("%d and is 0\n", last_digit);
-}
-else
-{
-printf("%d and is less than 6 and not 0\n", last_digit);
-}
-return (0);
+	/*code generates random number*/
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	if (n % 10  > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
+	}
+	if (n % 10 == 0)
+	{
+		printf("Last digit of %d is %d and is 0\n", n, n % 10);
+	}
+	if (n % 10 < 6  && n % 10 != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
+	}
+	return (0);
 }

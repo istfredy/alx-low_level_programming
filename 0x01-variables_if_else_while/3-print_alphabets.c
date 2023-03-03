@@ -1,24 +1,22 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
- * main - Entry point for the program
+ * main - print lowercase followed by uppercase alphabets
  *
- * Return: 0 on success
+ * Return: 0, if succesful
  */
 int main(void)
 {
-/*My Code Here*/
-char c = 'a';
-while (c <= 'z')
-{
-putchar(c);
-c++;
-}
-c = 'A';
-while (c <= 'Z')
-{
-putchar(c);
-c++;
-}
-putchar('\n');
-return (0);
+	char lc;
+
+	for (lc = 'a' ; lc <= 'z' ; lc++)
+	{
+		putchar(lc);
+	}
+	for (lc = 'a' ; lc <= 'z' ; lc++)
+	{
+		putchar(toupper(lc));
+	}
+	putchar('\n');
+	return (0);
 }

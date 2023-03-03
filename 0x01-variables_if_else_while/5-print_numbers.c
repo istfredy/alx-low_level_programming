@@ -1,19 +1,16 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
- *main - Entry of point
+ * main - to print all single numbers of base 10
  *
- * Return: 0 on success, none on faillure
+ * Return: 0, if succesful
  */
 int main(void)
 {
-/* My code */
-int n;
-n = 0;
-while (n < 10)
-{
-putchar(n + '0');
-n++;
-}
-putchar('\n');
-return (0);
+	int x;
+	/*to print all single numbers of base 10,loop through them*/
+	for (x = 0 ; x < 10 ; x++)
+	printf("%d", x);
+	printf("\n");
+	return (0);
 }

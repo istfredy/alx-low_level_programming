@@ -1,30 +1,30 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <time.h>
+#include <stdio.h>
+/* more headers goes there */
 /**
- * main - Entry point for the program
+ * main - generates random numbers,delcares + OR -
  *
- * Return: "is positive", "is zero", "is negative" or 0 none on failure
+ * Return: 1, if succesful
  */
 int main(void)
 {
-int n;
+	int n;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-printf("%d ", n);
-if (n > 0)
-{
-printf("is positive\n");
-}
-else if (n == 0)
-{
-printf("is zero\n");
-}
-else
-{
-printf("is negative\n");
-}
-/* your code goes there */
-return (0);
+	/*code generates random number*/
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	return (0);
 }

@@ -1,22 +1,19 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
- * main - Entry of point
+ * main - prints the alphabets in lower case,eclude e & q
  *
- * Return: 0 on success
+ * Return: O, if succesful
  */
 int main(void)
 {
-/* My Code ON */
-char c = 'a';
+	char lc;
 
-while (c <= 'z')
-{
-if (c != 'e' && c != 'q')
-{
-putchar(c);
-}
-c++;
-}
-putchar('\n');
-return (0);
+	for (lc = 'a' ; lc <= 'z' ; lc++)
+	{
+		if (lc != 'e' && lc != 'q')
+			putchar(lc);
+	}
+	putchar('\n');
+	return (0);
 }

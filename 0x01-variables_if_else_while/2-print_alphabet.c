@@ -1,18 +1,18 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
- * main - Entry point for the program
+ * main - prints the lower case of the alphabet
  *
- * Return: 0 on success, non-zero on failure
-*/
+ * Return: 0, if succesful
+ */
 int main(void)
 {
-/* Your code goes here */
-char c = 'a';
-while (c <= 'z')
-{
-putchar(c);
-c++;
-}
-putchar('\n');
-return (0);
+	char lc;
+
+	for (lc = 'a' ; lc <= 'z' ; lc++)
+	{
+		putchar(lc);
+	}
+	putchar('\n');
+	return (0);
 }
