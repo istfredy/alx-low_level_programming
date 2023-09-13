@@ -2,25 +2,28 @@
 
 /**
  * flip_clip - counts the number of bits to change
- * to get from one number to anothe
- * @n: first number
- * @m: second number
+ *		to get from one number to another.
+ * @n: first number.
+ * @m: second number to flip n to.
  *
- * Return: number of bits to change
+ * Return: number of bits to flip to get from n to m.
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int i, counter = 0;
-	unsigned long int current;
-	unsigned long int exclusive = n ^ m;
+	unsigned long int bts, check;
+	unsigned int i, count;
 
-	for (i = 63; i >= 0; i--)
+	check = 1;
+	bts = n ^ m;
+	count = 0;
+
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
-		current = exclusive >> i;
-		if (current & 1)
-			counter++;
+		if (check == (bts & check))
+			count++;
+		check <<= 1;
 	}
 
-	return (counter);
+	return (count);
 }
 
