@@ -48,14 +48,14 @@ void check98(ssize_t check, char *file, int fd_from, int fd_to)
  * @file: file_to name
  * @fd_from: file descriptor of file_from, or -1
  * @fd_to: file descriptor of file_to, or -1
- * 
+ *
  * Return: void
  */
 void check99(ssize_t check, char *file, int fd_from, int fd_to)
 {
 	if (check == -1)
 	{
-		dprint(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		if (fd_from != -1)
 			close(fd_from);
 		if (fd_to != -1)
@@ -106,7 +106,8 @@ int main(int argc, char *argv[])
 		lenr = read(fd_from, buffer, 1024);
 		check98(lenr, argv[1], fd_from, fd_to);
 		lenw = write(fd_to, buffer, lenr);
-		if (lenw != lenr)											lenw = -1;
+		if (lenw != lenr)
+			lenw = -1;
 		check99(lenw, argv[2], fd_from, fd_to);
 	}
 
